@@ -16,11 +16,10 @@ from dotenv import load_dotenv
 from pydantic import ValidationError
 
 from slide_assistant.builder import presentation_bytes
-from slide_assistant.llm import DEFAULT_CLAUDE_MODEL, DEFAULT_OPENAI_MODEL, ProviderError, get_provider
+from slide_assistant.llm import ProviderError, get_provider
 from slide_assistant.pipeline import generate_deck
-from slide_assistant.prompts import SYSTEM_PROMPT, parse_request
+from slide_assistant.prompts import parse_request
 from slide_assistant.schema import ChartSpec, Deck
-from slide_assistant.themes import THEMES
 
 ROOT = Path(__file__).parent
 load_dotenv(ROOT / ".env")
@@ -45,26 +44,21 @@ with st.sidebar:
         help="Demo mode uses template content so you can try the app without an API key.",
     )
     provider_name = {"Claude (Anthropic)": "claude", "GPT (OpenAI)": "openai"}.get(provider_label, "demo")
-    model, api_key = None, None
+    api_key = None
     if provider_name != "demo":
-        default_model = DEFAULT_CLAUDE_MODEL if provider_name == "claude" else DEFAULT_OPENAI_MODEL
-        model = st.text_input("Model", value=default_model)
         env_var = "ANTHROPIC_API_KEY" if provider_name == "claude" else "OPENAI_API_KEY"
         api_key = st.text_input(f"API key (optional if {env_var} is set)", type="password")
 
-    st.divider()
-    theme = st.selectbox("Theme", sorted(THEMES), index=sorted(THEMES).index("midnight"))
-    audience = st.text_input("Audience", value="business professionals")
-    tone = st.text_input("Tone", value="professional and concise")
-    include_charts = st.toggle("Include charts", value=True)
-    two_stage = st.toggle("Plan outline first (2-stage)", value=True,
-                          help="Stage 1 plans the storyline and layouts; stage 2 writes the content.")
-    override_count = st.toggle("Set slide count manually", value=False)
-    slide_count = st.slider("Slides", 3, 15, 6, disabled=not override_count)
-    extra = st.text_area("Extra instructions (optional)", placeholder="e.g. focus on India, cite 2024 data")
-
-    with st.expander("View system prompt"):
-        st.code(SYSTEM_PROMPT, language="markdown")
+# Fixed generation settings (the sidebar only asks for provider + key).
+# The slide count is read from the prompt, e.g. "Make a 5-slide deck ..." (default 6).
+model = None                      # provider default: claude-opus-5-5 / gpt-4o
+theme = "midnight"
+audience = "business professionals"
+tone = "professional and concise"
+include_charts = True
+two_stage = True                  # plan an outline first, then write the content
+override_count, slide_count = False, None
+extra = ""
 
 # ---------------------------------------------------------------------------
 # Main: prompt

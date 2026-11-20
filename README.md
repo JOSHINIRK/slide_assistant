@@ -73,10 +73,11 @@ cp .env.example .env        # then add ANTHROPIC_API_KEY and/or OPENAI_API_KEY
 ```bash
 streamlit run app.py
 ```
-1. In the sidebar, pick a provider: **Claude**, **GPT**, or **Demo (offline)**. Demo needs no API key.
-2. Optionally set the theme, audience, tone, charts on/off, outline-first, slide count and extra instructions.
-3. Enter a prompt and click **Generate deck**.
-4. Preview the slides (including the charts), edit the JSON spec if you want, then **download the .pptx**.
+1. In the sidebar, pick a provider: **Claude**, **GPT**, or **Demo (offline)**. For Claude or GPT, paste an API key there unless it's already in `.env`. Demo needs no key.
+2. Enter a prompt and click **Generate deck**. Say the slide count in the prompt ("Make a 5-slide deck on …"); otherwise you get 6 slides.
+3. Preview the slides (including the charts), edit the JSON spec if you want, then **download the .pptx**.
+
+The app always uses the `midnight` theme, charts on, and outline-first planning. To change the theme, audience, tone or slide count, use the CLI flags below.
 
 You can also load any sample from the "load a sample deck" dropdown without calling an LLM.
 
