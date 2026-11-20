@@ -1,0 +1,72 @@
+{
+  "title": "EV Trends: The Shift Goes Mainstream",
+  "subtitle": "Sales, markets, costs and what comes next",
+  "slides": [
+    {
+      "layout": "title",
+      "title": "EV Trends: The Shift Goes Mainstream",
+      "subtitle": "Sales, markets, costs and what comes next",
+      "speaker_notes": "This deck covers the state of the global electric vehicle market: how fast it is growing, where the growth is coming from, why costs are falling, and what that means for us."
+    },
+    {
+      "layout": "bullets_chart",
+      "title": "Global EV sales grew roughly eightfold in five years",
+      "bullets": [
+        "About 1 in 5 new cars sold worldwide in 2024 was electric",
+        "Growth continued even as several markets cut purchase subsidies",
+        "Plug-in hybrids gained share alongside battery-electric models"
+      ],
+      "chart": {
+        "type": "column",
+        "title": "Global electric car sales (BEV + PHEV)",
+        "categories": ["2019", "2020", "2021", "2022", "2023", "2024"],
+        "series": [{"name": "EV sales", "values": [2.1, 3.0, 6.6, 10.2, 13.8, 17.3]}],
+        "y_axis_label": "Million vehicles",
+        "source_note": "Source: IEA Global EV Outlook 2025 (approximate figures)"
+      },
+      "speaker_notes": "The curve has not flattened. Even in a year where some subsidies were withdrawn, sales still grew by roughly a quarter. Electric cars are now a mainstream product, not a niche."
+    },
+    {
+      "layout": "chart",
+      "title": "China accounts for nearly two-thirds of EV sales",
+      "chart": {
+        "type": "pie",
+        "title": "Share of global electric car sales, 2024",
+        "categories": ["China", "Europe", "United States", "Rest of world"],
+        "series": [{"name": "Share", "values": [65, 19, 9, 7]}],
+        "y_axis_label": "% of global sales",
+        "source_note": "Source: IEA Global EV Outlook 2025 (approximate shares)"
+      },
+      "speaker_notes": "China is both the largest market and the largest producer. Europe is second, while the US remains a smaller share. Emerging markets are small but growing fastest from a low base."
+    },
+    {
+      "layout": "bullets_chart",
+      "title": "Battery pack prices have fallen about 85% since 2013",
+      "bullets": [
+        "Batteries are the single largest cost in an EV",
+        "Cheaper LFP chemistries and scale drove the 2024 drop",
+        "Price parity with petrol cars is near in many segments"
+      ],
+      "chart": {
+        "type": "line",
+        "title": "Average lithium-ion battery pack price",
+        "categories": ["2013", "2020", "2023", "2024"],
+        "series": [{"name": "Pack price", "values": [780, 160, 139, 115]}],
+        "y_axis_label": "USD per kWh (real)",
+        "source_note": "Source: BloombergNEF battery price survey (approximate, real terms)"
+      },
+      "speaker_notes": "Falling battery costs are the engine behind everything else. Once pack prices settle around 100 dollars per kWh, electric cars can match petrol cars on upfront price without subsidies."
+    },
+    {
+      "layout": "closing",
+      "title": "Key takeaways",
+      "bullets": [
+        "EVs are mainstream: about 20% of global new car sales",
+        "China leads on both demand and manufacturing scale",
+        "Battery cost declines are closing the price gap with petrol",
+        "Charging access and grid readiness are the next bottlenecks"
+      ],
+      "speaker_notes": "The question for us is no longer whether the transition happens but how fast, and where we position ourselves in it. Happy to take questions."
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "title": "Nimbus Analytics: Q3 FY25 Business Review",
+  "subtitle": "Fictional company - illustrative data",
+  "slides": [
+    {
+      "layout": "title",
+      "title": "Nimbus Analytics: Q3 FY25 Business Review",
+      "subtitle": "Growth, retention and Q4 priorities",
+      "speaker_notes": "Welcome. This is the Q3 review for the leadership team. Nimbus Analytics is a fictional company and all numbers are illustrative."
+    },
+    {
+      "layout": "stats",
+      "title": "Q3 beat plan on revenue and retention",
+      "stats": [
+        {"value": "$48.2M", "label": "ARR, +34% year over year"},
+        {"value": "118%", "label": "net revenue retention"},
+        {"value": "1,240", "label": "paying customers"},
+        {"value": "78%", "label": "gross margin"}
+      ],
+      "bullets": ["ARR finished 4% above plan, driven by enterprise expansion"],
+      "speaker_notes": "Four numbers to remember. ARR and retention are both ahead of plan, and margin held steady despite heavier infrastructure spend."
+    },
+    {
+      "layout": "bullets_chart",
+      "title": "ARR has grown every quarter for two years",
+      "bullets": [
+        "Quarterly growth steady at 7-9%",
+        "Enterprise tier now 52% of ARR",
+        "No quarter below plan since Q1 FY24"
+      ],
+      "chart": {
+        "type": "line",
+        "title": "Annual recurring revenue",
+        "categories": ["Q4 FY24", "Q1 FY25", "Q2 FY25", "Q3 FY25"],
+        "series": [{"name": "ARR", "values": [36.0, 39.4, 44.1, 48.2]}],
+        "y_axis_label": "USD million",
+        "source_note": "Fictional company - illustrative data"
+      },
+      "speaker_notes": "Consistency is the story here. Growth is coming from both new logos and expansion, which makes the trajectory more durable."
+    },
+    {
+      "layout": "chart",
+      "title": "Expansion now contributes more new ARR than new logos",
+      "chart": {
+        "type": "column",
+        "title": "Net new ARR by source",
+        "categories": ["Q4 FY24", "Q1 FY25", "Q2 FY25", "Q3 FY25"],
+        "series": [
+          {"name": "New logos", "values": [1.9, 1.6, 2.1, 1.8]},
+          {"name": "Expansion", "values": [1.4, 1.8, 2.6, 2.3]}
+        ],
+        "y_axis_label": "USD million",
+        "source_note": "Fictional company - illustrative data"
+      },
+      "speaker_notes": "For two quarters in a row, existing customers have added more ARR than new customers. That validates the land-and-expand motion."
+    },
+    {
+      "layout": "two_column",
+      "title": "Strong wins, but sales capacity is a constraint",
+      "left_heading": "Wins",
+      "left_bullets": [
+        "Three Fortune 500 logos signed",
+        "Usage-based pricing launched on time",
+        "Support CSAT up to 94%"
+      ],
+      "right_heading": "Challenges",
+      "right_bullets": [
+        "Sales cycle lengthened to 74 days",
+        "Two senior AE roles still open",
+        "Cloud costs up 11% quarter over quarter"
+      ],
+      "speaker_notes": "We are winning when we compete, but we are capacity constrained. Hiring and cloud cost control are the two issues to fix in Q4."
+    },
+    {
+      "layout": "bullets",
+      "title": "Q4 priorities focus on capacity and efficiency",
+      "bullets": [
+        "Close both open enterprise AE roles by November",
+        "Cut cloud cost per customer 8% through workload rightsizing",
+        "Launch partner channel pilot with two system integrators",
+        "Ship SSO and audit logs to unblock regulated buyers"
+      ],
+      "speaker_notes": "Each priority has a named owner and a measurable target. We will report progress on all four at the next monthly review."
+    },
+    {
+      "layout": "closing",
+      "title": "Summary",
+      "bullets": [
+        "Q3 ahead of plan: $48.2M ARR, 118% NRR",
+        "Expansion revenue is now the main growth engine",
+        "Q4 focus: hiring, cloud efficiency, enterprise features"
+      ],
+      "speaker_notes": "Thank you. Questions and discussion."
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+python-pptx>=1.0.2
+anthropic>=2.10.0
+openai>=1.40.0
+pydantic>=2.7
+streamlit>=1.40
+altair>=5.0
+pandas>=2.0
+python-dotenv>=1.0
+pillow>=10.0        # scripts/contact_sheet.py (preview images)
+pytest>=8.0         # tests

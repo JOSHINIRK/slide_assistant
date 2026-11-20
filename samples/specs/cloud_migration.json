@@ -1,0 +1,85 @@
+{
+  "title": "Cloud Migration Strategy",
+  "subtitle": "A phased plan for moving core workloads to the cloud",
+  "slides": [
+    {
+      "layout": "title",
+      "title": "Cloud Migration Strategy",
+      "subtitle": "A phased plan for moving core workloads to the cloud",
+      "speaker_notes": "This deck proposes a phased approach to migrating our core applications. All cost figures are illustrative planning estimates."
+    },
+    {
+      "layout": "bullets",
+      "title": "Our on-premise estate is limiting speed and resilience",
+      "bullets": [
+        "Hardware refresh for 60% of servers is due within 18 months",
+        "New environments take weeks to provision instead of minutes",
+        "Disaster recovery is tested once a year and only partially",
+        "Peak demand forces us to pay for idle capacity year-round"
+      ],
+      "speaker_notes": "The refresh cycle gives us a natural decision point: reinvest in hardware, or move workloads to the cloud."
+    },
+    {
+      "layout": "chart",
+      "title": "Most workloads can be rehosted or replatformed",
+      "chart": {
+        "type": "doughnut",
+        "title": "Application portfolio by migration path",
+        "categories": ["Rehost", "Replatform", "Refactor", "Replace (SaaS)", "Retire"],
+        "series": [{"name": "Applications", "values": [38, 27, 12, 15, 8]}],
+        "y_axis_label": "% of applications",
+        "source_note": "Illustrative data - based on a sample portfolio assessment"
+      },
+      "speaker_notes": "Only around one in eight applications needs significant re-engineering. The majority can move with limited code change, which keeps risk and cost down."
+    },
+    {
+      "layout": "two_column",
+      "title": "Phased migration balances speed and risk",
+      "left_heading": "Phase 1: Foundations (0-6 months)",
+      "left_bullets": [
+        "Landing zone, identity and network",
+        "Migrate dev/test and low-risk apps",
+        "Set up FinOps cost reporting"
+      ],
+      "right_heading": "Phase 2: Core workloads (6-18 months)",
+      "right_bullets": [
+        "Rehost and replatform core systems",
+        "Refactor top customer-facing apps",
+        "Decommission the primary data centre"
+      ],
+      "speaker_notes": "Phase 1 builds the guardrails and earns confidence on lower-risk systems. Phase 2 moves the critical workloads once the foundations are proven."
+    },
+    {
+      "layout": "bullets_chart",
+      "title": "Run costs fall below on-premise from year two",
+      "bullets": [
+        "Year one carries dual-running and migration costs",
+        "Savings come from rightsizing and retiring idle capacity",
+        "Payback expected within about three years"
+      ],
+      "chart": {
+        "type": "bar",
+        "title": "Annual infrastructure cost (planning estimate)",
+        "categories": ["Year 1", "Year 2", "Year 3"],
+        "series": [
+          {"name": "Stay on-premise", "values": [10.0, 10.4, 10.8]},
+          {"name": "Migrate to cloud", "values": [12.1, 8.9, 7.6]}
+        ],
+        "y_axis_label": "USD million",
+        "source_note": "Illustrative data - planning estimate, not a quote"
+      },
+      "speaker_notes": "The first year costs more because we run both environments. From year two the cloud option is cheaper, and the gap widens as we optimise."
+    },
+    {
+      "layout": "closing",
+      "title": "Decisions needed today",
+      "bullets": [
+        "Approve Phase 1 budget and landing-zone design",
+        "Confirm the cloud provider shortlist for final evaluation",
+        "Nominate business owners for the first ten applications",
+        "Agree a target date to exit the primary data centre"
+      ],
+      "speaker_notes": "We are asking for four decisions so Phase 1 can start next month."
+    }
+  ]
+}
